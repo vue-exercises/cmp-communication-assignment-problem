@@ -22,8 +22,10 @@ export default {
   },
   methods: {
     addMyUser(user, age) {
-      this.user.name = user
-      this.user.age = age
+      this.user = {
+        name: user,
+        age: +age,
+      }
     },
   },
 }
