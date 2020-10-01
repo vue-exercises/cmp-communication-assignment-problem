@@ -5,7 +5,7 @@
       <user-data @add-user="addMyUser"></user-data>
     </div>
     <div class="cont">
-      <active-user :username="myUser" :age="myAge"></active-user>
+      <active-user :username="user.name" :age="user.age"></active-user>
     </div>
   </section>
 </template>
@@ -14,16 +14,16 @@
 export default {
   data() {
     return {
-      myUser: "",
-      myAge: "",
+      user: {
+        name: "",
+        age: "",
+      },
     }
   },
   methods: {
     addMyUser(user, age) {
-      this.myUser = user
-      this.myAge = age
-      console.log(this.myUser)
-      console.log(this.myAge)
+      this.user.name = user
+      this.user.age = age
     },
   },
 }
